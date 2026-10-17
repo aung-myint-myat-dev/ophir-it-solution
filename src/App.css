@@ -1,37 +1,4 @@
-.page-shell {
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.site-nav {
-  position: sticky;
-  z-index: 20;
-  top: 0;
-  border-bottom: 1px solid rgba(25, 37, 31, 0.07);
-  background: rgba(251, 252, 250, 0.9);
-  backdrop-filter: blur(18px);
-}
-
-.nav-inner {
-  width: min(1180px, calc(100% - 48px));
-  height: 76px;
-  margin: 0 auto;
-}
-
-.brand-mark {
-  display: inline-flex;
-  width: 34px;
-  height: 34px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 11px;
-  background: #176b4a;
-  color: white;
-}
-
-.display-font {
-  font-family: var(--font-display), sans-serif;
-}
+@layer components {
 
 .eyebrow {
   display: inline-flex;
@@ -192,18 +159,6 @@
   background: #26342c;
 }
 
-.soft-card {
-  border: 1px solid #e9eee9;
-  background: white;
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-}
-
-.soft-card:hover {
-  transform: translateY(-4px);
-  border-color: #d7e5da;
-  box-shadow: 0 18px 40px rgba(25, 37, 31, 0.07);
-}
-
 .accent-mint {
   background: #e7f3eb;
   color: #176b4a;
@@ -217,18 +172,6 @@
 .accent-blue {
   background: #e9f0f4;
   color: #43667a;
-}
-
-.project-image {
-  background: #e7efe8;
-}
-
-.project-image img {
-  transition: transform 500ms ease;
-}
-
-.soft-card:hover .project-image img {
-  transform: scale(1.045);
 }
 
 .section-pad {
@@ -245,97 +188,10 @@
   color: white;
 }
 
-.page-shell[data-theme="dark"] {
-  background: #101814;
-  color: #e9efeb;
-  --color-background: #101814;
-  --color-text-color: #e9efeb;
-}
-
-.page-shell[data-theme="dark"] main {
-  background: #101814;
-}
-
-.page-shell[data-theme="dark"] .site-nav {
-  border-color: rgba(220, 234, 223, 0.1);
-  background: rgba(16, 24, 20, 0.92);
-}
-
-.page-shell[data-theme="dark"] .hero-panel {
-  border-color: rgba(220, 234, 223, 0.12);
-  background: linear-gradient(145deg, #20352a 0%, #202b25 58%, #382b25 100%);
-}
-
-.page-shell[data-theme="dark"] .dashboard-card,
-.page-shell[data-theme="dark"] .soft-card,
-.page-shell[data-theme="dark"] [class~="bg-white"] {
-  border-color: #2a3930;
-  background-color: #1b2620;
-}
-
-.page-shell[data-theme="dark"] [class~="bg-[#f3f6f2]"],
-.page-shell[data-theme="dark"] [class~="bg-[#f5f8f5]"],
-.page-shell[data-theme="dark"] [class~="bg-[#fbfcfa]"] {
-  background-color: #18221c;
-}
-
-.page-shell[data-theme="dark"] [class~="text-[#19251f]"],
-.page-shell[data-theme="dark"] [class~="text-[#34443a]"],
-.page-shell[data-theme="dark"] [class~="text-[#334239]"],
-.page-shell[data-theme="dark"] [class~="text-[#27372d]"],
-.page-shell[data-theme="dark"] [class~="text-[#26372c]"],
-.page-shell[data-theme="dark"] [class~="text-[#44534a]"],
-.page-shell[data-theme="dark"] [class~="text-[#45534a]"],
-.page-shell[data-theme="dark"] [class~="text-[#46534a]"],
-.page-shell[data-theme="dark"] [class~="text-[#536158]"],
-.page-shell[data-theme="dark"] [class~="text-[#5c6a61]"] {
-  color: #e3ebe5;
-}
-
-.page-shell[data-theme="dark"] [class~="text-[#68756d]"],
-.page-shell[data-theme="dark"] [class~="text-[#78857c]"],
-.page-shell[data-theme="dark"] [class~="text-[#7c8980]"],
-.page-shell[data-theme="dark"] [class~="text-[#829087]"],
-.page-shell[data-theme="dark"] [class~="text-[#859188]"],
-.page-shell[data-theme="dark"] [class~="text-[#89958d]"],
-.page-shell[data-theme="dark"] [class~="text-[#8a968e]"],
-.page-shell[data-theme="dark"] [class~="text-[#929c95]"] {
-  color: #a6b4aa;
-}
-
-.page-shell[data-theme="dark"] [class~="border-[#e9eee9]"],
-.page-shell[data-theme="dark"] [class~="border-[#edf0ed]"],
-.page-shell[data-theme="dark"] [class~="border-[#e7ece7]"],
-.page-shell[data-theme="dark"] [class~="border-[#e5ebe5]"] {
-  border-color: #2a3930;
-}
-
-.page-shell[data-theme="dark"] .project-image {
-  background: #26372d;
-}
-
-.page-shell[data-theme="dark"] .showcase-monitor,
-.page-shell[data-theme="dark"] .showcase-phone-screen {
-  color: #19251f;
-}
-
-html[lang="my"] body {
-  font-family: "Noto Sans Myanmar", "DM Sans", sans-serif;
-}
-
 @media (max-width: 767px) {
-  .nav-inner {
-    width: min(100% - 36px, 1180px);
-    height: 68px;
-  }
-
   .section-pad {
     padding-top: 68px;
     padding-bottom: 68px;
-  }
-
-  .hero-panel {
-    border-radius: 22px;
   }
 
   .showcase-devices {
@@ -351,4 +207,5 @@ html[lang="my"] body {
     width: 96px;
     height: 190px;
   }
+}
 }

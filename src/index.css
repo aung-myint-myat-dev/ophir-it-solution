@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap');
+@import "flag-icons/css/flag-icons.min.css";
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   font-family: "DM Sans", sans-serif;
-  color: #19251f;
   background: #fbfcfa;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,11 +44,18 @@ body {
   color: var(--color-text-color);
 }
 
-body, button, a {
+html[lang="my"] body {
+  font-family: "Noto Sans Myanmar", "DM Sans", sans-serif;
+}
+
+body,
+button,
+a {
   font-family: "DM Sans", sans-serif;
 }
 
-button, a {
+button,
+a {
   -webkit-tap-highlight-color: transparent;
 }
 
